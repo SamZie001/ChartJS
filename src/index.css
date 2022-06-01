@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body{
+    background-color: hsl(27, 66%, 92%);
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+}
+.App{
+    box-sizing: border-box;
+    width: 550px;
+    margin: 50px auto;
+}
+.balance{
+    background: hsl(10, 79%, 65%);
+    max-height: 50px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.balance p{
+    color: #fff;
+}
+.chart-display{
+    padding: 20px;
+    background:  hsl(33, 100%, 98%);
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.barrier{
+    width: 450px;
+    margin: 25px auto;
+    height: 1px;
+    background: hsl(27, 66%, 92%);
+}
+
+.summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span p{
+    font-size: 18px;
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    margin-top: -5px;
+}
+.br{
+    color: hsl(28, 10%, 53%);
+}
+.title{
+    font-size: 20px;
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+
+
+
+
+
+/* Mobile View */
+@media only screen and (max-width: 412px) {
+    *{
+        font-size: 20px;
+    }
+    .App{
+        max-width: 400px;
+        margin: 60px auto;
+        display: block;
+    }
+    .balance{
+        background: hsl(10, 79%, 65%);
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+    .chart-display{
+        padding: 60px 10px;
+        background:  hsl(33, 100%, 98%);
+        height: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    .summary{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .barrier{
+        width: 390px;
+        margin: 50px auto;
+        height: 1px;
+        background: hsl(27, 66%, 92%);
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+    }
+}
