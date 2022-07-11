@@ -1,16 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import {Bar, Line, Pie} from 'react-chartjs-2'
+import {Bar} from 'react-chartjs-2'
 import {CategoryScale} from 'chart.js'; 
 import Chart from 'chart.js/auto';
-import Data from '../data.json'
 
 function BarChart() {
+  const [url, setUrl] = useState('http://localhost:3000/items')
+  const [data, setData] = useState([])
   Chart.register(CategoryScale);
+
+  useEffect(()=>{
+    const fetchData = async (url) => {
+      const response = await fetch(url);
+      const resData = await response.json()
+      setData(resData)
+    }
+    fetchData(url)
+  },[url])
+
+  useEffect(()=>{
+    setData(data)
+  }, [data])
+
 
   let days = []
   let amount = []
 
-  Data.map(each=>{
+  data.map(each=>{
     days.push(each.day)
     amount.push(each.amount)
   })

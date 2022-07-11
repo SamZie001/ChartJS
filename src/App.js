@@ -5,38 +5,40 @@ import LOGO from './images/logo.svg'
 const App=()=> {
   return (
     <div className="App">
-        <div className="balance">
+      <div className="balance">
 
-          <div className="details">
-            <p>My balance</p>
-            <span> <p>$921.48</p> </span>
-          </div>
-          <div className="logo">
-            <img src={LOGO} alt="Logo" />
-          </div>
-
+        <div className="details">
+          <p>My balance</p>
+          <p><span>$921.48</span></p>
         </div>
+        
+        <div className="logo">
+          <img src={LOGO} alt="Logo" />
+        </div>
+
+      </div>
 
       <div className="chart-display">
         <div className="title">
-          <p>Spending - Last 7 days</p>
+          <p style={{fontSize: '1.8rem', fontWeight: 'bold', color: 'hsl(25, 47%, 15%)'}}>Spending - Last 7 days</p>
         </div>
 
           <BarChart />
 
         <div className="barrier"></div>
 
-        <div className="summary">
-          <div className="total">
-            <p className="br">Total this month</p>
-            <span> <p>$478.33</p> </span>
+        <div className="last">
+          <div className="last-1">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
           </div>
 
-          <div className="previous">
-            <p style={{color:'hsl(25, 47%, 15%)',fontWeight: '700'}}>+2.4%</p>
-            <p className="br">from last month</p>
+          <div className="last-2">
+            <h3>+2.4%</h3>
+            <p>from last month</p>
           </div>
         </div>
+        
       </div>
 
     </div>
